@@ -9,5 +9,8 @@ export default defineConfig({
       targets:['ie >= 11'],
       additionalLegacyPolyfills:['regenerator-runtime/runtime']
     })
-  ]
+  ],
+  esbuild:{
+    jsxInject:`import React from 'react'`
+  }
 })
