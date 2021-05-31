@@ -4,14 +4,18 @@ import List from '../list';
 
 const routes=[
     {
-        from:'/dashboard/localid',
-        to:'/dashboard/localid/list',
+        from:'/dashboard/product',
+        to:'/dashboard/product/list',
     },{
-        path:'/dashboard/localid/list',
-        component:List
+        path:'/dashboard/product/list',
+        component:List,
+        title:'产品管理',
+        subtitle:'产品列表'
     },,{
-        path:'/dashboard/localid/add',
-        component:Add
+        path:'/dashboard/product/add',
+        component:Add,
+        title:'产品管理',
+        subtitle:'添加产品'
     },{
         path:'*',
         component:NotFound

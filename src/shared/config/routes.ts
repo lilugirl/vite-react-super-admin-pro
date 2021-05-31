@@ -1,7 +1,7 @@
 import { lazy } from 'react';
-import Dashboard from '../../modules/dashboard';
+import Dashboard from '../../modules/dashboard/container';
 import Login from '../../modules/login';
-const Docs = lazy(()=>import("../../modules/docs"));
+const Docs = lazy(()=>import("../../modules/docs/container"));
 const NotFound=lazy(()=>import("../../modules/dashboard/exceptions/404"))
 const routes=[
     {

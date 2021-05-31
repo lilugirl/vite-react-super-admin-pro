@@ -8,10 +8,14 @@ const routes=[
         to:'/dashboard/user/list',
     },{
         path:'/dashboard/user/list',
-        component:List
+        component:List,
+        title:'用户管理',
+        subtitle:'用户列表'
     },,{
         path:'/dashboard/user/add',
-        component:Add
+        component:Add,
+        title:'用户管理',
+        subtitle:'添加用户'
     },{
         path:'*',
         component:NotFound
