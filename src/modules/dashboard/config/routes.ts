@@ -1,13 +1,17 @@
 import NotFound from "../exceptions/404"
-import LocalId from "../localid"
+import User from '../user';
+import Product from '../product';
 
 const routes=[
     {
         from:'/dashboard',
-        to:'/dashboard/localid',
+        to:'/dashboard/user',
     },{
-        path:'/dashboard/localid',
-        component:LocalId
+        path:'/dashboard/user',
+        component:User
+    },{
+        path:'/dashboard/product',
+        component:Product
     },{
         path:'*',
         component:NotFound
