@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import http from '../../../shared/httpclient';
+import http from '@/shared/httpclient';
 const List=()=>{
     useEffect(()=>{
        http.get('/index-infos').then((res)=>{

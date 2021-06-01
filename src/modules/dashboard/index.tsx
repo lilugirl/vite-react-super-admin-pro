@@ -1,6 +1,6 @@
 import { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import RouterView from "../../shared/router";
+import RouterView from "@/shared/router";
 import BreadCrumb from "./components/breadcrumb";
 import routes from "./config/routes";
 import { setTitle, setSubTitle } from "./store/slice/navSlice";

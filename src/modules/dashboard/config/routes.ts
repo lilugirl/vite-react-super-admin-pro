@@ -3,7 +3,7 @@ import NotFound from "../exceptions/404";
 const NoRight =lazy(()=>import('../exceptions/403'));
 import User from '../user';
 import Product from '../product';
-import {IRoute} from '../../../shared/utils/types/router';
+import {IRoute} from '@/shared/utils/types/router';
 
 
 

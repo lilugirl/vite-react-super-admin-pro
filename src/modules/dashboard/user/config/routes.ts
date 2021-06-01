@@ -1,9 +1,9 @@
 import NotFound from "../../exceptions/404"
 import Add from "../add";
 import List from '../list';
-import {IRoute} from '../../../../shared/utils/types/router';
+import {IRoute} from '@/shared/utils/types/router';
 
-const routes:IRoute[]=[
+const routes:IRoute|any[]=[
     {
         from:'/dashboard/user',
         to:'/dashboard/user/list',

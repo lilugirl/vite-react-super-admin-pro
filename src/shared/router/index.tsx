@@ -2,7 +2,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import {useSelector} from 'react-redux';
 import {selectRole} from '../store/slice/authSlice';
 import { IRoute } from "../utils/types/router";
-const RouterView = ({ routes }:{routes:IRoute[]}) => {
+const RouterView = ({ routes }:any) => {
   const role=useSelector(selectRole);
   const componentList = routes.filter((v: any) => v.component);
   const redirectList = routes.filter((v: any) => v.to);
@@ -10,7 +10,7 @@ const RouterView = ({ routes }:{routes:IRoute[]}) => {
   return (
     <>
       <Switch>
-        {redirectList.map((v: IRoute, i: number) => {
+        {redirectList.map((v: any, i: number) => {
           return <Redirect exact from={v.from} to={v.to} key={i}></Redirect>;
         })}
         {componentList.map((v: IRoute, i: number) => {

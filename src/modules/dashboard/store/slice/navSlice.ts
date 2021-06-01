@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import { DashboardState } from '../reducer/dashboardReducer';
+import {RootState} from '@/shared/store/reducer/rootReducer';
 
 const initialState:any={
     title:'',
@@ -22,6 +22,6 @@ export const navSlice=createSlice({
 })
 
 export const {setTitle,setSubTitle} =navSlice.actions;
-export const selectTitle=(state:DashboardState)=>state.nav.title;
-export const selectSubTitle=(state:DashboardState)=>state.nav.subtitle;
+export const selectTitle=(state:RootState)=>state.nav.title;
+export const selectSubTitle=(state:RootState)=>state.nav.subtitle;
 export default navSlice.reducer;

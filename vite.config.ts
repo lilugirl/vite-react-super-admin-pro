@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import legacy from '@vitejs/plugin-legacy';
-
+import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   server:{
@@ -23,5 +23,10 @@ export default defineConfig({
   ],
   esbuild:{
     jsxInject:`import React from 'react'`
+  },
+  resolve:{
+    alias:{
+      '@':path.resolve(__dirname,'src') // src路径
+    }
   }
 })
