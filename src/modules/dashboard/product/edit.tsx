@@ -1,4 +1,4 @@
-const Edit=()=>{
-    return <div>edit localid</div>
-}
+const Edit = () => {
+  return <div>edit localid</div>;
+};
 export default Edit;

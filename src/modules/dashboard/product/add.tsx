@@ -1,4 +1,4 @@
-const Add=()=>{
-    return <div>add localid</div>
-}
+const Add = () => {
+  return <div>add localid</div>;
+};
 export default Add;

@@ -1,4 +1,4 @@
-const Docs=()=>{
-    return <div>docs</div>
-}
+const Docs = () => {
+  return <div>docs</div>;
+};
 export default Docs;

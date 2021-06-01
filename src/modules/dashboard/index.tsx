@@ -9,7 +9,7 @@ import Nav from "./components/nav";
 import Footer from "./components/footer";
 import "./style.scss";
 const Dashboard = (props: any) => {
-  console.log('dashbaord props',props);
+  console.log("dashbaord props", props);
   const dispatch = useDispatch();
   useEffect(() => {
     if (props?.location?.state?.title) {
