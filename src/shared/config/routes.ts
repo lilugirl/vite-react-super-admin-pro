@@ -14,8 +14,6 @@ const routes:IRoute[]=[
         component:Dashboard,
         authority: ["admin","sysadmin"],
         redirectPath: "/login",
-
-
     },{
         path:'/docs',
         component:Docs,

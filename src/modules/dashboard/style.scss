@@ -8,9 +8,10 @@
     header{
         grid-area:head;
         background-color: gray;
+        padding:16px;
     }
     nav{
-        
+        padding:16px;
         grid-area:nav;
         background-color: blueviolet;
         a{
@@ -20,9 +21,13 @@
     }
     main{
         grid-area:main;
+        padding:16px;
     }
     footer{
         grid-area:foot;
         background-color: gray;
+        display:flex;
+        align-items: center;
+       
     }
 }

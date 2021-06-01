@@ -1,5 +1,5 @@
 {
-  "name": "vite-sbs-localid",
+  "name": "react-vite-admin-pro",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
+    "axios": "^0.21.1",
+    "qs": "^6.10.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-redux": "^7.2.4",
