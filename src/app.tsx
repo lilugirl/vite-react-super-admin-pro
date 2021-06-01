@@ -1,10 +1,5 @@
 import { Suspense, lazy } from "react";
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import ScrollToTop from "./shared/components/scroll-to-top";
 import RouterView from "./shared/router";
 import routes from "./shared/config/routes";
