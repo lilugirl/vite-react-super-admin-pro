@@ -1,10 +1,10 @@
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './app'
-import {store} from './shared/store';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './app';
+import globalStore from './shared/store';
 import {Provider} from 'react-redux';
 ReactDOM.render(
-  <Provider store={store} >
+  <Provider store={globalStore}  >
     <App />
   </Provider>
 ,

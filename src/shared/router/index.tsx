@@ -1,14 +1,19 @@
 import { Switch, Route, Redirect } from "react-router-dom";
-const RouterView = ({ routes }: any) => {
+import {useSelector} from 'react-redux';
+import {selectRole} from '../store/slice/authSlice';
+import { IRoute } from "../utils/types/router";
+const RouterView = ({ routes }:{routes:IRoute[]}) => {
+  const role=useSelector(selectRole);
   const componentList = routes.filter((v: any) => v.component);
   const redirectList = routes.filter((v: any) => v.to);
+  
   return (
     <>
       <Switch>
-        {redirectList.map((v: any, i: number) => {
+        {redirectList.map((v: IRoute, i: number) => {
           return <Redirect exact from={v.from} to={v.to} key={i}></Redirect>;
         })}
-        {componentList.map((v: any, i: number) => {
+        {componentList.map((v: IRoute, i: number) => {
        
           return (
             <Route key={v.path} path={v.path} render={(props:any)=>{
@@ -19,7 +24,15 @@ const RouterView = ({ routes }: any) => {
                   subtitle:v.subtitle
                 }
               }
+
+              if(v.authority && v.authority.length>0){
+                if(!role || !v.authority.includes(role)){
+                  return <Redirect from={v.path} to={v.redirectPath || '/login'}></Redirect>
+                }
+              }
+
               return  <v.component  {...props}></v.component>
+              
             }}>
              
             </Route>

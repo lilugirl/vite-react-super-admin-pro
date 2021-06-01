@@ -1,4 +1,4 @@
 const List=()=>{
-    return <div>list of localid </div>
+    return <div>list of product </div>
 }
 export default List;
